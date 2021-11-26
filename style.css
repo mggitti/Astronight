@@ -72,12 +72,13 @@ body{
 }
 
 .events{
-  position: relative;
-
-  display: flex;
+  padding: 32px;
   width: 100vw;
-  height: 50vh;
 }
+.events-dates{
+  text-align: center;
+}
+
 .aboutAstronight{
   width: 100vw;
   padding: 32px;
