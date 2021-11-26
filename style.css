@@ -7,6 +7,13 @@
 *{
   margin: 0;
   padding: 0;
+
+  font-family:'Helvetica Neue';
+  color:white;
+  font-size: 1rem;
+}
+
+body{
   background-color: black;
 }
 
@@ -87,16 +94,32 @@
   padding: 0 16px;
   margin: 0 auto;
   text-align: justify;
-
-  color:white;
-  font-size: 1rem;
-  font-family:'Helvetica Neue';
 }
 
 .faq{
   position: relative;
-
-  display: flex;
   width: 100vw;
-  height: 50vh;
+  padding: 32px;
+}
+.faq-entryCollection-container{
+  align-items: top;
+  text-align: center;
+  padding: 0px 32px;
+}
+.faq-entry-container{
+  display: inline-block;
+  max-width: 500px;
+  padding: 16px;
+  margin: 4px 0px 4px 4px;
+  border-radius: 8px;
+
+  background-color: #202020;
+}
+.faq-entry-header{
+  display: block;
+  font-size: 3rem;
+}
+.faq-entry-body{
+  display: block;
+  text-align: justify;
 }
