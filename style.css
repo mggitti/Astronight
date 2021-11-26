@@ -54,7 +54,6 @@ body{
 
 .sectionHeader-container{
   height: auto;
-  width: 100vw;
   padding-bottom: 16px;
 }
 .sectionHeader{
@@ -73,14 +72,12 @@ body{
 
 .events{
   padding: 32px;
-  width: 100vw;
 }
 .events-dates{
   text-align: center;
 }
 
 .aboutAstronight{
-  width: 100vw;
   padding: 32px;
 }
 .aboutAstronight-textColumn-container{
@@ -99,7 +96,6 @@ body{
 
 .faq{
   position: relative;
-  width: 100vw;
   padding: 32px;
 }
 .faq-entryCollection-container{
