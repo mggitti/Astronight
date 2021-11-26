@@ -17,41 +17,35 @@ body{
   background-color: black;
 }
 
+
+/* Hero Section */
 .hero{
-  display: flex;
   position: relative;
-  width: 100vw;
   height: 100vh;
   align-items: center;
 }
 .hero-title-container{
-  display: flex;
-
   position:absolute;
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .hero-title{
-  color:white;
-
   font-size: 10rem;
   font-family:'nasaliza';
 }
-.hero-downarrow-container{
-  display: flex;
-
+.hero-downArrow-container{
   position:absolute;
   bottom: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.hero-downarrow{
-  color:white;
+.hero-downArrow{
   font-size: 50px;
 }
 
 
+/* Section Header */
 .sectionHeader-container{
   height: auto;
   padding-bottom: 16px;
@@ -63,6 +57,8 @@ body{
   text-align: center;
 }
 
+
+/* Section Separator */
 .sectionSeparator{
   background-color: gray;
   display: flex;
@@ -70,6 +66,8 @@ body{
   width: 100vw;
 }
 
+
+/* Event Section */
 .events{
   padding: 32px;
 }
@@ -77,6 +75,8 @@ body{
   text-align: center;
 }
 
+
+/* About Astronight Section */
 .aboutAstronight{
   padding: 32px;
 }
@@ -94,8 +94,9 @@ body{
   text-align: justify;
 }
 
+
+/* FAQ Section */
 .faq{
-  position: relative;
   padding: 32px;
 }
 .faq-entryCollection-container{
