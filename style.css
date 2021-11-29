@@ -31,9 +31,14 @@ body{
   transform: translate(-50%, -50%);
 }
 .hero-title{
-  font-size: 10rem;
+  font-size: 16vw;
   font-family:'nasaliza';
   color: white;
+}
+@media only screen and (min-width: 1000px) {
+  .hero-title {
+     font-size: 10rem;
+  }
 }
 .hero-downArrow-container{
   position:absolute;
@@ -56,6 +61,11 @@ body{
   font-size: 5rem;
   font-family:'nasaliza';
   text-align: center;
+}
+@media only screen and (max-width: 500px) {
+  .sectionHeader {
+     font-size: 14vw;
+  }
 }
 
 
