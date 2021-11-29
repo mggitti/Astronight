@@ -100,12 +100,13 @@ body{
   padding: 32px;
 }
 .faq-entryCollection-container{
-  align-items: top;
   text-align: center;
   padding: 0px 32px;
 }
 .faq-entry-container{
   display: inline-block;
+  vertical-align: top;
+  width: 40vw;
   max-width: 500px;
   padding: 16px;
   margin: 4px 0px 4px 4px;
@@ -113,11 +114,26 @@ body{
 
   background-color: #202020;
 }
+@media only screen and (max-width: 1100px) {
+  .faq-entry-container{
+    width: 80vw;
+  }
+}
 .faq-entry-header{
+  text-align: left;
   display: block;
   font-size: 3rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  color: lightgray;
+}
+.faq-entry-header:hover{
+  color: white;
+  font-weight:450
 }
 .faq-entry-body{
-  display: block;
+  display: none;
   text-align: justify;
 }
