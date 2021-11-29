@@ -89,10 +89,16 @@ body{
 .aboutAstronight-textColumn{
   vertical-align: top;
   display:inline-block;
+  width: 35vw;
   max-width: 500px;
   padding: 0 16px;
   margin: 0 auto;
   text-align: justify;
+}
+@media only screen and (max-width: 1000px) {
+  .aboutAstronight-textColumn{
+    width: 80vw;
+  }
 }
 
 
