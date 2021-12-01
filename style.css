@@ -20,17 +20,12 @@ body{
 
 /* Hero Section */
 .hero{
-  position: relative;
+  display:block;
   height: 100vh;
   align-items: center;
 }
-.hero-title-container{
-  position:absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 .hero-title{
+  text-align: center;
   font-size: 16vw;
   font-family:'nasaliza';
   color: white;
@@ -49,7 +44,20 @@ body{
 .hero-downArrow{
   font-size: 50px;
 }
-
+.hero-image-container{
+  position:absolute;
+  top:0px;
+  z-index: -1;
+  width:100vw;
+  height: 100vh;
+  text-align: center;
+}
+.hero-image{
+  display:none;
+  width:inherit;
+  height: inherit;
+  object-fit:contain;
+}
 
 /* Section Header */
 .sectionHeader-container{
