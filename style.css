@@ -51,12 +51,17 @@ body{
   width:100vw;
   height: 100vh;
   text-align: center;
+  
 }
 .hero-image{
-  display:none;
+  display: flex;
+  position: absolute;
   width:inherit;
   height: inherit;
   object-fit:contain;
+
+  opacity: 0;
+  transition: opacity 2s
 }
 
 /* Section Header */

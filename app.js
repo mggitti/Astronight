@@ -1,7 +1,8 @@
 var faqCollapsibles = document.getElementsByClassName("faq-entry-header");
 var images = document.getElementsByClassName("hero-image");
-let imageChangeInterval = 3000;
 var currentImage = 0;
+let imageChangeInterval = 6000;
+var fadeDuration = parseFloat(getComputedStyle(images[0])['transitionDuration']) * 1000;
 
 for (let i = 0; i < faqCollapsibles.length; i++) {
     faqCollapsibles[i].addEventListener("click", function () {
@@ -17,13 +18,16 @@ for (let i = 0; i < faqCollapsibles.length; i++) {
 }
 
 setInterval(() => { toggleImage() }, imageChangeInterval);
-toggleImage();
+images[currentImage].style.opacity = 1;
 
 function toggleImage() {
-    for (let i = 0; i < images.length; i++) {
-        images[i].style.display = "none";
-    }
-    images[currentImage].style.display = "flex";
-
     currentImage = (currentImage + 1) % images.length;
+
+    for (let i = 0; i < images.length; i++) {
+        images[i].style.opacity = 0;
+    }
+
+    setTimeout(() => {
+        images[currentImage].style.opacity = 1;
+    }, fadeDuration);
 }
