@@ -58,6 +58,7 @@ body{
   position: absolute;
   width:inherit;
   height: inherit;
+  /* Might be overridden in index.html */
   object-fit:contain;
 
   opacity: 0;
