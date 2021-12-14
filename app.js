@@ -6,7 +6,7 @@ var fadeDuration = parseFloat(getComputedStyle(images[0])['transitionDuration'])
 var heroDownArrow = document.getElementsByClassName("hero-downArrow")[0];
 
 for (let i = 0; i < faqCollapsibles.length; i++) {
-    faqCollapsibles[i].addEventListener("click", () => {
+    faqCollapsibles[i].addEventListener("click", function () {
         this.classList.toggle("active");
 
         var content = this.nextElementSibling;
@@ -35,7 +35,7 @@ function toggleImage() {
 }
 
 
-heroDownArrow.addEventListener("click", () => {
+heroDownArrow.addEventListener("click", function () {
     SmoothVerticalScrolling(window.scrollY, window.innerHeight, 500)
 })
 
