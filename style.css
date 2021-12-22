@@ -26,13 +26,19 @@ body{
 }
 .hero-title{
   text-align: center;
-  font-size: 16vw;
+  font-size: 14vw;
   font-family:'nasaliza';
-  color: white;
+  color: rgb(29, 145, 204);
 }
-@media only screen and (min-width: 1000px) {
+.hero-title-image{
+  height: 10vw;
+}
+@media only screen and (min-width: 1100px) {
   .hero-title {
      font-size: 10rem;
+  }
+  .hero-title-image{
+    height: 7rem;
   }
 }
 .hero-downArrow-container{
