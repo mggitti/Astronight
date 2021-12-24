@@ -168,12 +168,15 @@ body{
   text-align: justify;
 }
 .faq-section-content-image-container{
-  padding: 16px;
+  margin: 32px 32px 16px 16px;
+  background-color: #3b5269;
+  border-radius: 6px;
 }
 .faq-section-content-image{
-  width:500px;
-  height:500px;
-  object-fit: cover;
+  width:30vw;
+  border-radius: 6px;
+  margin: -16px -16px 16px 16px;
+  vertical-align: middle; /*remove 3px of downwards padding*/
 }
 .clearfix::after {
   content: "";
