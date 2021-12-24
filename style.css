@@ -146,6 +146,11 @@ body{
   text-align: justify;
 }
 
+.faq-tableOfContents{
+  list-style:decimal;
+  padding:8px;
+}
+
 .faq-content-container{
   width:auto;
   max-width: 1000px;
