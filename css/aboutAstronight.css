@@ -1,0 +1,22 @@
+.aboutAstronight {
+    padding: 32px;
+}
+.aboutAstronight-textColumn-container {
+    align-items: top;
+    text-align: center;
+    padding: 0px 32px;
+}
+.aboutAstronight-textColumn {
+    vertical-align: top;
+    display: inline-block;
+    width: 35vw;
+    max-width: 500px;
+    padding: 0 16px;
+    margin: 0 auto;
+    text-align: justify;
+}
+@media only screen and (max-width: 1000px) {
+    .aboutAstronight-textColumn {
+        width: auto;
+    }
+}

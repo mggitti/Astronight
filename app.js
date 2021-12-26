@@ -2,7 +2,8 @@ var faqCollapsibles = document.getElementsByClassName("faq-entry-header");
 var images = document.getElementsByClassName("hero-image");
 var currentImage = 0;
 let imageChangeInterval = 6000;
-var fadeDuration = parseFloat(getComputedStyle(images[0])['transitionDuration']) * 1000;
+var fadeDuration =
+    parseFloat(getComputedStyle(images[0])["transitionDuration"]) * 1000;
 var heroDownArrow = document.getElementsByClassName("hero-downArrow")[0];
 
 for (let i = 0; i < faqCollapsibles.length; i++) {
@@ -18,8 +19,9 @@ for (let i = 0; i < faqCollapsibles.length; i++) {
     });
 }
 
-
-setInterval(() => { toggleImage() }, imageChangeInterval);
+setInterval(() => {
+    toggleImage();
+}, imageChangeInterval);
 images[currentImage].style.opacity = 1;
 
 function toggleImage() {
@@ -34,23 +36,26 @@ function toggleImage() {
     }, fadeDuration);
 }
 
-
 heroDownArrow.addEventListener("click", function () {
-    SmoothVerticalScrolling(window.scrollY, window.innerHeight, 500)
-})
+    SmoothVerticalScrolling(window.scrollY, window.innerHeight, 500);
+});
 
 //Adapted from: https://stackoverflow.com/questions/51229742/javascript-window-scroll-behavior-smooth-not-working-in-safari
 function SmoothVerticalScrolling(startY, endY, time) {
-    var incrementCount = time / 1000 * 60;
+    var incrementCount = (time / 1000) * 60;
     var linearProgress = 0;
     var deltaY = endY - startY;
 
     while (linearProgress <= 1) {
         linearProgress += 1 / incrementCount;
 
-        setTimeout((y) => {
-            window.scrollTo(0, y);
-        }, linearProgress * time, easeOutCubic(linearProgress) * deltaY + startY);
+        setTimeout(
+            (y) => {
+                window.scrollTo(0, y);
+            },
+            linearProgress * time,
+            easeOutCubic(linearProgress) * deltaY + startY
+        );
     }
 }
 
