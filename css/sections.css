@@ -25,6 +25,6 @@
 
 /* Sections */
 .primarySection {
-    background-image: url("images/starBackground.png");
+    background-image: url("/images/starBackground.png");
     margin-bottom: 32px;
 }
