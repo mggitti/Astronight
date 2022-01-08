@@ -26,5 +26,7 @@
 /* Sections */
 .primarySection {
     background-image: url("/images/starBackground.png");
-    margin-bottom: 32px;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    padding-bottom: 32px;
 }
