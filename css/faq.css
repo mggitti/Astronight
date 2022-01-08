@@ -1,5 +1,5 @@
 .faq {
-    padding: 32px;
+    padding: 32px 0;
     background-color: #23303c;
     text-align: justify;
 }
@@ -10,7 +10,7 @@
 }
 
 .faq-content-container {
-    width: auto;
+    width: calc(90vw + 17px);
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -35,4 +35,21 @@
     border-radius: 6px;
     margin: -16px -16px 16px 16px;
     vertical-align: middle; /*remove 3px of downwards padding*/
+}
+
+@media only screen and (max-width: 900px) {
+    .faq-content-container {
+        padding: 0px 32px;
+        width: auto;
+        max-width: none;
+    }
+    .faq-section-content-container {
+        text-align: left;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .faq-content-container {
+        padding: 0px 16px;
+        text-align: left;
+    }
 }
