@@ -1,7 +1,7 @@
 /* General */
 @font-face {
     font-family: "nasaliza";
-    src: url(/fonts/nasaliza.ttf);
+    src: url(../fonts/nasaliza.ttf);
 }
 
 * {
@@ -111,7 +111,7 @@ body {
 }
 
 .primarySection {
-    background-image: url("/images/starBackground.png");
+    background-image: url("../images/starBackground.png");
     background-repeat: repeat;
     background-attachment: scroll;
     padding-bottom: 32px;
