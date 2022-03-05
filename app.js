@@ -5,6 +5,7 @@ let imageChangeInterval = 6000;
 var fadeDuration =
     parseFloat(getComputedStyle(images[0])["transitionDuration"]) * 1000;
 var heroDownArrow = document.getElementsByClassName("hero-downArrow")[0];
+var navbar = document.getElementsByClassName("navbar")[0];
 
 for (let i = 0; i < faqCollapsibles.length; i++) {
     faqCollapsibles[i].addEventListener("click", function () {
@@ -62,3 +63,23 @@ function SmoothVerticalScrolling(startY, endY, time) {
 function easeOutCubic(x) {
     return 1 - Math.pow(1 - x, 3);
 }
+
+//NavBar
+window.addEventListener("scroll", () => {
+    if (window.scrollY < window.innerHeight / 2) {
+        navbar.style.opacity = 0;
+    } else {
+        navbar.style.opacity = 1;
+    }
+});
+
+const menu = document.querySelector("#mobile-menu");
+const menuLinks = document.querySelector(".navbar-menu");
+
+// Display Mobile Menu
+const mobileMenu = () => {
+    menu.classList.toggle("is-active");
+    menuLinks.classList.toggle("active");
+};
+
+menu.addEventListener("click", mobileMenu);
