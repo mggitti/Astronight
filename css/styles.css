@@ -467,9 +467,11 @@ body {
 .legalInformation-container {
     color: #a0a0a0;
     text-align: center;
+    font-size: 0.75rem;
     padding-bottom: 16px;
 }
 .legalInformation-link {
+    font-size: 0.75rem;
     color: #a0a0a0;
 }
 .legalInformation-link:hover {
