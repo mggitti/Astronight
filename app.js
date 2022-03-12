@@ -105,3 +105,10 @@ setInterval(() => {
     }
 }, 4000);
 window.addEventListener("scroll", hideDownwardArrow);
+
+function copyMailToClipboard() {
+    navigator.clipboard.writeText("daniel.gruber@chgts.de");
+    alert(
+        'Unsere Email "daniel.gruber@chgts.de" wurde in ihre Zwischenablage kopiert'
+    );
+}

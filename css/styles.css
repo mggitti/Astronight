@@ -315,13 +315,22 @@ body {
 /* FAQ */
 .faq {
     padding: 32px 0;
-    background-color: #23303c;
+    background-color: rgb(43, 60, 78);
     text-align: justify;
 }
 
 .faq-tableOfContents {
     list-style: decimal;
     padding: 8px;
+}
+.faq-copyEmailButton {
+    border: none;
+    background-color: #00000000;
+    color: #fff;
+    font-weight: bold;
+}
+.faq-copyEmailButton:hover {
+    color: #ccc;
 }
 
 .faq-content-container {
@@ -330,30 +339,30 @@ body {
     margin: 0 auto;
 }
 .faq-section-container {
-    margin-top: 16px;
+    margin-top: 24px;
 }
 .faq-section-header {
     font-size: 3rem;
     font-weight: bold;
     text-align: left;
+    margin-bottom: 12px;
 }
 .faq-section-content-container {
     text-align: justify;
 }
-.faq-section-content-image-container {
-    margin: 32px 32px 16px 16px;
-    background-color: #3b5269;
-    background-color: #0a141f;
-    border-radius: 6px;
-}
+
 .faq-section-content-image {
-    width: 30vw;
-    border-radius: 6px;
-    margin: -16px -16px 16px 16px;
-    vertical-align: middle; /*remove 3px of downwards padding*/
+    text-align: center;
+    width: calc(50% - 8px);
+    border-radius: 8px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #3b5269;
+    float: left;
+    margin: 0px 8px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
     .faq-content-container {
         padding: 0px 32px;
         width: auto;
@@ -362,11 +371,20 @@ body {
     .faq-section-content-container {
         text-align: left;
     }
+    .faq-section-content-image {
+        width: calc(60% - 8px);
+        padding: 0;
+    }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 650px) {
     .faq-content-container {
         padding: 0px 16px;
         text-align: left;
+    }
+    .faq-section-content-image {
+        margin: 0;
+        margin-bottom: 4px;
+        width: calc(100% - 8px);
     }
 }
 
@@ -423,10 +441,17 @@ body {
     .sponsor-logo {
         vertical-align: middle;
         height: 50px;
+        width: 100%;
+        object-fit: contain;
     }
     .sponsor-logo-pool {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
+    }
+}
+@media only screen and (max-width: 500px) {
+    .sponsors-title {
+        font-size: 14vw;
     }
 }
 
