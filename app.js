@@ -38,7 +38,7 @@ function toggleImage() {
 }
 
 heroDownArrow.addEventListener("click", function () {
-    SmoothVerticalScrolling(window.scrollY, window.innerHeight, 500);
+    SmoothVerticalScrolling(window.scrollY, window.innerHeight - 80, 750);
 });
 
 //Adapted from: https://stackoverflow.com/questions/51229742/javascript-window-scroll-behavior-smooth-not-working-in-safari
@@ -89,3 +89,19 @@ const dismissMobileMenu = () => {
 menu.addEventListener("click", toggleMobileMenu);
 menuLinks.addEventListener("click", dismissMobileMenu);
 window.addEventListener("scroll", dismissMobileMenu);
+
+//Show arrow after a period of inactivity on the hero scene
+
+function showDownwardArrow() {
+    if (heroDownArrow.style.opacity != 1) heroDownArrow.style.opacity = 1;
+}
+function hideDownwardArrow() {
+    if (heroDownArrow.style.opacity != 0) heroDownArrow.style.opacity = 0;
+}
+
+setInterval(() => {
+    if (scrollY == 0) {
+        showDownwardArrow();
+    }
+}, 4000);
+window.addEventListener("scroll", hideDownwardArrow);
