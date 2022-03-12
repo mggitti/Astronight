@@ -77,9 +77,15 @@ const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".navbar-menu");
 
 // Display Mobile Menu
-const mobileMenu = () => {
+const toggleMobileMenu = () => {
     menu.classList.toggle("is-active");
     menuLinks.classList.toggle("active");
 };
+const dismissMobileMenu = () => {
+    menu.classList.remove("is-active");
+    menuLinks.classList.remove("active");
+};
 
-menu.addEventListener("click", mobileMenu);
+menu.addEventListener("click", toggleMobileMenu);
+menuLinks.addEventListener("click", dismissMobileMenu);
+window.addEventListener("scroll", dismissMobileMenu);
