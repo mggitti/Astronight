@@ -45,6 +45,7 @@ body {
 
     opacity: 0;
     transition: opacity 0.25s ease-in-out;
+    background: #131313;
 }
 .navbar-container {
     display: flex;
