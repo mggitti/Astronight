@@ -4,8 +4,11 @@ var currentImage = 0;
 let imageChangeInterval = 6000;
 var fadeDuration =
     parseFloat(getComputedStyle(images[0])["transitionDuration"]) * 1000;
-var heroDownArrow = document.getElementsByClassName("hero-downArrow")[0];
 var navbar = document.getElementsByClassName("navbar")[0];
+var arrow = document.getElementsByClassName("hero-arrow")[0];
+var arrowAnimationDuration = 6000;
+var arrowAnimationTimeOut = 250;
+var arrowAnimationDelay = 2000;
 
 for (let i = 0; i < faqCollapsibles.length; i++) {
     faqCollapsibles[i].addEventListener("click", function () {
@@ -37,7 +40,7 @@ function toggleImage() {
     }, fadeDuration);
 }
 
-heroDownArrow.addEventListener("click", function () {
+arrow.addEventListener("click", function () {
     SmoothVerticalScrolling(window.scrollY, window.innerHeight - 80, 750);
 });
 
@@ -92,19 +95,52 @@ window.addEventListener("scroll", dismissMobileMenu);
 
 //Show arrow after a period of inactivity on the hero scene
 
-function showDownwardArrow() {
-    if (heroDownArrow.style.opacity != 1) heroDownArrow.style.opacity = 1;
-}
-function hideDownwardArrow() {
-    if (heroDownArrow.style.opacity != 0) heroDownArrow.style.opacity = 0;
-}
+var restartAnimation = true;
+var animationActive = false;
 
-setInterval(() => {
+triggerArrowAnimation();
+window.addEventListener("scroll", triggerArrowAnimation);
+
+function triggerArrowAnimation() {
+    restartAnimation = scrollY == 0;
+
     if (scrollY == 0) {
-        showDownwardArrow();
+        setTimeout(() => {
+            if (scrollY == 0 && !animationActive) {
+                animateArrow();
+            }
+        }, arrowAnimationDelay);
     }
-}, 4000);
-window.addEventListener("scroll", hideDownwardArrow);
+}
+function animateArrow() {
+    animationActive = true;
+
+    //SubAnimations
+    arrowAnimateIn();
+    setTimeout(arrowAnimateOut, arrowAnimationDuration * 0.5);
+
+    //Completion
+    setTimeout(() => {
+        animationActive = false;
+    }, arrowAnimationDuration);
+
+    //Auto Restart
+    setTimeout(() => {
+        if (restartAnimation) {
+            animateArrow();
+        }
+    }, arrowAnimationDuration + arrowAnimationTimeOut);
+}
+function arrowAnimateIn() {
+    arrow.classList.add("animateIn");
+}
+function arrowAnimateOut() {
+    arrow.classList.remove("animateIn");
+    arrow.classList.add("animateOut");
+    setTimeout(() => {
+        arrow.classList.remove("animateOut");
+    }, arrowAnimationDuration * 0.5);
+}
 
 function copyMailToClipboard() {
     navigator.clipboard.writeText("daniel.gruber@chgts.de");

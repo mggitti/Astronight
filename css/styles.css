@@ -207,19 +207,36 @@ body {
         height: 7rem;
     }
 }
-.hero-downArrow-container {
+
+.hero-arrow-container {
     position: absolute;
-    z-index: 0;
-    bottom: 0%;
+    bottom: 16px;
     left: 50%;
-    transform: translate(-50%, -50%);
-}
-.hero-downArrow {
-    font-size: 50px;
+
     cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
 }
+
+.hero-arrow {
+    opacity: 0;
+
+    transform: translate(-50%, -250%);
+    width: 45px;
+    aspect-ratio: 194/88;
+
+    background-image: url("../images/arrow.svg");
+}
+
+.hero-arrow.animateIn {
+    opacity: 1;
+    transform: translate(-50%, -100%);
+    transition: all 3s cubic-bezier(0.05, 1, 0.55, 1.75);
+}
+.hero-arrow.animateOut {
+    opacity: 0;
+    transform: translate(-50%, 50%);
+    transition: all 3s cubic-bezier(0.45, -0.75, 0.95, 0);
+}
+
 .hero-image-container {
     position: absolute;
     top: 0px;
