@@ -100,7 +100,7 @@ body {
     transition: all 0.3 color;
 }
 
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1360px) {
     .navbar-container {
         padding: 0;
     }
@@ -279,6 +279,9 @@ body {
 }
 @media only screen and (max-width: 700px) {
     #registration-sectionHeader {
+        font-size: 12vw;
+    }
+    #faq-sectionHeader {
         font-size: 12vw;
     }
 }
