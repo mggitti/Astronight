@@ -148,3 +148,6 @@ function copyMailToClipboard() {
         'Unsere Email "daniel.gruber@chgts.de" wurde in ihre Zwischenablage kopiert'
     );
 }
+function jumpToRegistrationForm() {
+    window.location.href = "https://www.jotform.com";
+}
