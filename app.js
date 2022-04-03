@@ -10,6 +10,13 @@ var arrowAnimationDuration = 6000;
 var arrowAnimationTimeOut = 250;
 var arrowAnimationDelay = 2000;
 
+var fullscreenImageViewBackground = document.getElementsByClassName(
+    "fullscreenImageView-background"
+)[0];
+var fullscreenImageView = document.getElementsByClassName(
+    "fullscreenImageView"
+)[0];
+
 for (let i = 0; i < faqCollapsibles.length; i++) {
     faqCollapsibles[i].addEventListener("click", function () {
         this.classList.toggle("active");
@@ -140,6 +147,23 @@ function arrowAnimateOut() {
     setTimeout(() => {
         arrow.classList.remove("animateOut");
     }, arrowAnimationDuration * 0.5);
+}
+
+window.addEventListener("scroll", hideFullscreenImage);
+var fullscreenImageActive = false;
+function showFullscreenImage(imagePath) {
+    if (window.innerWidth < 650) return;
+    if (fullscreenImageActive) return;
+
+    fullscreenImageActive = true;
+    fullscreenImageView.src = imagePath;
+    fullscreenImageViewBackground.classList.add("active");
+}
+function hideFullscreenImage() {
+    if (!fullscreenImageActive) return;
+
+    fullscreenImageActive = false;
+    fullscreenImageViewBackground.classList.remove("active");
 }
 
 function copyMailToClipboard() {

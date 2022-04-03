@@ -42,6 +42,19 @@
                 </ul>
             </div>
         </nav>
+
+        <div
+            onclick="hideFullscreenImage()"
+            class="fullscreenImageView-background"
+        >
+            <div class="fullscreenImageView-container">
+                <img
+                    class="fullscreenImageView"
+                    src="images/faq/Teleskope.jpeg"
+                />
+            </div>
+        </div>
+
         <!-- Hero Section -->
         <div class="hero">
             <div class="hero-title-container">
@@ -215,6 +228,7 @@
                         <img
                             src="images/faq/Teleskope.jpeg"
                             class="faq-section-content-image"
+                            onclick="showFullscreenImage('images/faq/Teleskope.jpeg')"
                         />
                         Als Teleskope benutzen wir zwei Celestron C8, ein
                         kürzlich von einem Vorgängerseminar gekauftes, und ein
@@ -240,6 +254,7 @@
                         <img
                             src="images/heroImages/starbirth2.jpg"
                             class="faq-section-content-image"
+                            onclick="showFullscreenImage('images/heroImages/starbirth2.jpg')"
                         />
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                         sed diam nonumy eirmod tempor invidunt ut labore et
