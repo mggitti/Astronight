@@ -152,7 +152,7 @@ function arrowAnimateOut() {
 window.addEventListener("scroll", hideFullscreenImage);
 var fullscreenImageActive = false;
 function showFullscreenImage(imagePath) {
-    if (window.innerWidth < 650) return;
+    if (window.innerWidth < 500) return;
     if (fullscreenImageActive) return;
 
     fullscreenImageActive = true;
