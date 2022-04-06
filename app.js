@@ -173,5 +173,5 @@ function copyMailToClipboard() {
     );
 }
 function jumpToRegistrationForm() {
-    window.location.href = "https://www.jotform.com";
+    window.location.href = "https://form.jotform.com/220952533108047";
 }
