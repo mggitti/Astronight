@@ -1,9 +1,9 @@
 var faqCollapsibles = document.getElementsByClassName("faq-entry-header");
-var images = document.getElementsByClassName("hero-image");
+var heroImage = document.getElementsByClassName("hero-image")[0];
 var currentImage = 0;
 let imageChangeInterval = 6000;
 var fadeDuration =
-    parseFloat(getComputedStyle(images[0])["transitionDuration"]) * 1000;
+    parseFloat(getComputedStyle(heroImage)["transitionDuration"]) * 1000;
 var navbar = document.getElementsByClassName("navbar")[0];
 var arrow = document.getElementsByClassName("hero-arrow")[0];
 var arrowAnimationDuration = 6000;
@@ -16,6 +16,67 @@ var fullscreenImageViewBackground = document.getElementsByClassName(
 var fullscreenImageView = document.getElementsByClassName(
     "fullscreenImageView"
 )[0];
+
+var nextHeroImage = new Image();
+var currentHeroImageIndex = 0;
+var heroImages = [
+    {
+        name: "andromeda.jpg",
+        cover: true,
+    },
+    {
+        name: "blackhole2.jpg",
+        cover: true,
+    },
+    {
+        name: "jupiter.jpg",
+        cover: false,
+    },
+    {
+        name: "hercules.jpg",
+        cover: true,
+    },
+    {
+        name: "star.jpg",
+        cover: true,
+    },
+    {
+        name: "pleiades.jpg",
+        cover: true,
+    },
+    {
+        name: "blackhole.jpg",
+        cover: true,
+    },
+    {
+        name: "starBirth3.jpg",
+        cover: true,
+    },
+    {
+        name: "stars.jpg",
+        cover: true,
+    },
+    {
+        name: "galaxy.jpg",
+        cover: true,
+    },
+    {
+        name: "saturn.jpg",
+        cover: false,
+    },
+    {
+        name: "mars.jpg",
+        cover: false,
+    },
+    {
+        name: "starbirth2.jpg",
+        cover: true,
+    },
+    {
+        name: "starBirth.jpg",
+        cover: true,
+    },
+];
 
 for (let i = 0; i < faqCollapsibles.length; i++) {
     faqCollapsibles[i].addEventListener("click", function () {
@@ -30,21 +91,39 @@ for (let i = 0; i < faqCollapsibles.length; i++) {
     });
 }
 
-setInterval(() => {
-    toggleImage();
-}, imageChangeInterval);
-images[currentImage].style.opacity = 1;
-
-function toggleImage() {
-    currentImage = (currentImage + 1) % images.length;
-
-    for (let i = 0; i < images.length; i++) {
-        images[i].style.opacity = 0;
-    }
+heroImageLoop();
+function heroImageLoop() {
+    showHeroImage();
+    loadNextImage();
 
     setTimeout(() => {
-        images[currentImage].style.opacity = 1;
-    }, fadeDuration);
+        hideHeroImage();
+        setTimeout(() => {
+            switchToNextImage();
+            heroImageLoop();
+        }, fadeDuration);
+    }, imageChangeInterval);
+}
+
+function loadNextImage() {
+    var nextImageIndex = (currentHeroImageIndex + 1) % heroImages.length;
+    nextHeroImage.src = "images/heroImages/" + heroImages[nextImageIndex].name;
+}
+function switchToNextImage() {
+    currentHeroImageIndex = (currentHeroImageIndex + 1) % heroImages.length;
+
+    heroImage.src = nextHeroImage.src;
+    if (heroImages[currentHeroImageIndex].cover) {
+        heroImage.classList.remove("contain");
+    } else {
+        heroImage.classList.add("contain");
+    }
+}
+function showHeroImage() {
+    heroImage.style.opacity = 1;
+}
+function hideHeroImage() {
+    heroImage.style.opacity = 0;
 }
 
 arrow.addEventListener("click", function () {
