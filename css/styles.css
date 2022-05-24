@@ -44,7 +44,6 @@ body {
     font-size: 1.2rem;
 
     opacity: 0;
-    background: #131313;
     transition: opacity 0.25s ease-in-out;
 }
 .navbar-container {
@@ -57,7 +56,11 @@ body {
     max-width: 1300px;
 
     margin: 0 auto;
-
+}
+.navbar-background {
+    display: flex;
+    width: 100%;
+    height: 100%;
     background: #131313;
 }
 
