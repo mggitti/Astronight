@@ -84,14 +84,15 @@ body {
     align-items: center;
     list-style: none;
     grid-template-columns: auto;
-    width: 100vw;
+    width: calc(100vw - 64px);
+    padding: 32px;
 
     position: absolute;
     display: grid;
     left: 0;
     top: 80px;
     z-index: -1;
-    background: #131313;
+    background: rgb(23, 33, 42);
     transform: translateY(-100%);
 
     transition: all 0.4s ease;
@@ -100,6 +101,17 @@ body {
     transform: translateY(0%);
 }
 
+.navbar-item-separator {
+    text-align: center;
+    position: relative;
+    left: 50%;
+    /* left: 0; */
+    transform: translateX(-50%);
+    margin: 8px 0px;
+    max-width: 300px;
+    height: 1px;
+    background-color: #ffffff55;
+}
 .navbar-item {
     display: flex;
     width: 100%;
