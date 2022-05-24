@@ -166,12 +166,6 @@ function hideFullscreenImage() {
     fullscreenImageViewBackground.classList.remove("active");
 }
 
-function copyMailToClipboard() {
-    navigator.clipboard.writeText("daniel.gruber@chgts.de");
-    alert(
-        'Unsere Email "daniel.gruber@chgts.de" wurde in ihre Zwischenablage kopiert'
-    );
-}
 function jumpToRegistrationForm() {
     window.location.href = "https://form.jotform.com/220952533108047";
 }
