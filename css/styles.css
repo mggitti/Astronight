@@ -327,7 +327,7 @@ body {
     #registration-sectionHeader {
         font-size: 12vw;
     }
-    #faq-sectionHeader {
+    #equipment-sectionHeader {
         font-size: 12vw;
     }
 }
@@ -390,46 +390,21 @@ body {
     border-color: rgb(25, 130, 182);
 }
 
-/* FAQ */
-.faq {
+/* Equipment */
+.equipment {
     padding: 32px 0;
     background-color: rgb(43, 60, 78);
     text-align: justify;
 }
 
-.faq-tableOfContents {
-    list-style: decimal;
-    padding: 8px;
-}
-.faq-copyEmailButton {
-    border: none;
-    background-color: #00000000;
-    color: #fff;
-    font-weight: bold;
-}
-.faq-copyEmailButton:hover {
-    color: #ccc;
-}
-
-.faq-content-container {
+.equipment-content-container {
     width: calc(90vw + 17px);
     max-width: 1000px;
     margin: 0 auto;
-}
-.faq-section-container {
-    margin-top: 24px;
-}
-.faq-section-header {
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: 12px;
-}
-.faq-section-content-container {
     text-align: justify;
 }
 
-.faq-section-content-image {
+.equipment-section-content-image {
     text-align: center;
     width: calc(50% - 8px);
     border-radius: 8px;
@@ -441,24 +416,22 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-    .faq-content-container {
+    .equipment-content-container {
         padding: 0px 32px;
         width: auto;
         max-width: none;
-    }
-    .faq-section-content-container {
         text-align: left;
     }
-    .faq-section-content-image {
+    .equipment-section-content-image {
         width: calc(60% - 8px);
         padding: 0;
     }
 }
 @media only screen and (max-width: 500px) {
-    .faq-content-container {
+    .equipment-content-container {
         padding: 0px 16px;
     }
-    .faq-section-content-image {
+    .equipment-section-content-image {
         margin: 0;
         margin-bottom: 4px;
         width: calc(100% - 8px);
