@@ -231,7 +231,6 @@ body {
     width: 100vw;
     text-align: center;
     position: absolute;
-    display: inline;
     top: 16px;
 }
 .hero-title {
@@ -242,6 +241,14 @@ body {
 }
 .hero-title-image {
     height: 10vw;
+}
+.hero-links-container {
+    transform: translate(0, -8px);
+    color: rgb(29, 145, 204);
+}
+.hero-links {
+    color: rgb(29, 145, 204);
+    font-size: 1.25rem;
 }
 @media only screen and (min-width: 1100px) {
     .hero-title-container {
