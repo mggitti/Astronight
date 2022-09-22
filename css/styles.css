@@ -332,13 +332,6 @@ body {
     }
 }
 
-.sectionSeparator {
-    background-color: #303030;
-    display: flex;
-    height: 2px;
-    width: 100vw;
-}
-
 .primarySection {
     background-image: url("../images/starBackground.png");
     background-repeat: repeat;
@@ -394,7 +387,7 @@ body {
 
 /* Agenda */
 .agenda {
-    padding: 32px 32px 0px 32px;
+    padding: 16px 32px 0px 32px;
     align-content: center;
 }
 .agenda-info {
@@ -562,11 +555,9 @@ body {
 
 /* legalInformation */
 .legalInformation-separator {
-    /* width: calc(100vw-32px); */
     height: 2px;
     border-radius: 1px;
     background-color: #ddd;
-    /* background-color: #707070; */
     margin: 16px 8px;
 }
 .legalInformation-container {
