@@ -46,6 +46,9 @@ body {
     opacity: 0;
     transition: opacity 0.25s ease-in-out;
 }
+.navbar.forceOpacity {
+    opacity: 1;
+}
 .navbar-container {
     display: flex;
     align-items: center;
