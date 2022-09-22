@@ -65,7 +65,7 @@ var heroImages = [
         cover: false,
     },
     {
-        name: "mars.jpg",
+        name: "mars.png",
         cover: false,
     },
     {

@@ -356,14 +356,7 @@ body {
 
     text-align: justify;
 }
-@media only screen and (max-width: 500px) {
-    .registration {
-        padding: 32px 16px;
-    }
-    .registration-info {
-        text-align: left;
-    }
-}
+
 .registration-button-container {
     margin-top: 16px;
     text-align: center;
@@ -388,6 +381,81 @@ body {
 .registration-button:active {
     background-color: rgb(29, 145, 204);
     border-color: rgb(25, 130, 182);
+}
+
+@media only screen and (max-width: 500px) {
+    .registration {
+        padding: 32px 16px;
+    }
+    .registration-info {
+        text-align: left;
+    }
+}
+
+/* Agenda */
+.agenda {
+    padding: 32px 32px 0px 32px;
+    align-content: center;
+}
+.agenda-info {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: justify;
+}
+.agenda-object-pool {
+    padding: 64px 0;
+
+    display: grid;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+}
+.agenda-object {
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+.agenda-object-title {
+    padding-top: 8px;
+    font-size: 2rem;
+    font-family: "nasaliza";
+}
+.agenda-object-information {
+    padding-top: 4px;
+    text-decoration: none;
+    margin: 0 auto;
+}
+.agenda-object-image {
+    width: 75%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .agenda-object-pool {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .agenda-object-image {
+        max-width: 200px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .agenda-object-pool {
+        padding-top: 32px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .agenda-object-image {
+        max-width: 250px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .agenda {
+        padding: 32px 16px;
+    }
+    .agenda-info {
+        text-align: left;
+    }
 }
 
 /* Equipment */
