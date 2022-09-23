@@ -312,6 +312,12 @@ body {
 .hero-image.contain {
     object-fit: contain;
 }
+.hero-credits {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    color: #bbb;
+}
 
 /* Sections */
 .sectionHeader-container {
@@ -346,7 +352,6 @@ body {
     background-image: url("../images/starBackground.png");
     background-repeat: repeat;
     background-attachment: scroll;
-    padding-bottom: 32px;
 }
 
 /* Events */
@@ -406,7 +411,7 @@ body {
     text-align: justify;
 }
 .agenda-object-pool {
-    padding: 64px 0;
+    padding: 64px 0 32px;
 
     display: grid;
     width: 100%;
@@ -433,6 +438,11 @@ body {
 }
 .agenda-object-image {
     width: 75%;
+}
+.agenda-credits {
+    padding-bottom: 32px;
+    text-align: right;
+    color: #bbb;
 }
 
 @media only screen and (max-width: 1000px) {
