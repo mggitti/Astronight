@@ -21,6 +21,10 @@ var nextHeroImage = new Image();
 var currentHeroImageIndex = 0;
 var heroImages = [
     {
+        name: "star.jpg",
+        cover: true,
+    },
+    {
         name: "andromeda.jpg",
         cover: true,
     },
@@ -33,19 +37,7 @@ var heroImages = [
         cover: false,
     },
     {
-        name: "hercules.jpg",
-        cover: true,
-    },
-    {
-        name: "star.jpg",
-        cover: true,
-    },
-    {
         name: "pleiades.jpg",
-        cover: true,
-    },
-    {
-        name: "blackhole.jpg",
         cover: true,
     },
     {
@@ -59,14 +51,6 @@ var heroImages = [
     {
         name: "galaxy.jpg",
         cover: true,
-    },
-    {
-        name: "saturn.jpg",
-        cover: false,
-    },
-    {
-        name: "mars.png",
-        cover: false,
     },
     {
         name: "starbirth2.jpg",
@@ -91,6 +75,8 @@ for (let i = 0; i < faqCollapsibles.length; i++) {
     });
 }
 
+heroImage.src =
+    "images/heroImages/" + getResolutionDirectory() + heroImages[0].name;
 heroImageLoop();
 function heroImageLoop() {
     showHeroImage();
@@ -107,7 +93,10 @@ function heroImageLoop() {
 
 function loadNextImage() {
     var nextImageIndex = (currentHeroImageIndex + 1) % heroImages.length;
-    nextHeroImage.src = "images/heroImages/" + heroImages[nextImageIndex].name;
+    nextHeroImage.src =
+        "images/heroImages/" +
+        getResolutionDirectory() +
+        heroImages[nextImageIndex].name;
 }
 function switchToNextImage() {
     currentHeroImageIndex = (currentHeroImageIndex + 1) % heroImages.length;
@@ -124,6 +113,12 @@ function showHeroImage() {
 }
 function hideHeroImage() {
     heroImage.style.opacity = 0;
+}
+function getResolutionDirectory() {
+    if (window.innerWidth > 1200) {
+        return "HQ/";
+    }
+    return "LQ/";
 }
 
 arrow.addEventListener("click", function () {
