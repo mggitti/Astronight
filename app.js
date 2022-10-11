@@ -37,6 +37,10 @@ var heroImages = [
         cover: false,
     },
     {
+        name: "stars2.jpg",
+        cover: true,
+    },
+    {
         name: "pleiades.jpg",
         cover: true,
     },
