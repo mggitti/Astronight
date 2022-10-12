@@ -423,9 +423,6 @@ body {
     vertical-align: middle;
     text-align: center;
 }
-.agenda-dummy-object {
-    display: block;
-}
 .agenda-object-title {
     padding-top: 8px;
     font-size: 2rem;
@@ -453,9 +450,6 @@ body {
     }
     .agenda-object-image {
         max-width: 200px;
-    }
-    .agenda-dummy-object {
-        display: none;
     }
 }
 @media only screen and (max-width: 600px) {
