@@ -265,6 +265,11 @@ body {
         height: 7rem;
     }
 }
+@media only screen and (max-width: 650px) {
+    .hero-links-container {
+        display: none;
+    }
+}
 
 .hero-arrow-container {
     position: absolute;
