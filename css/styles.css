@@ -359,6 +359,7 @@ body {
     max-width: 600px;
 
     text-align: justify;
+    line-height: 1.3;
 }
 
 @media only screen and (max-width: 500px) {
@@ -379,6 +380,7 @@ body {
     max-width: 600px;
 
     text-align: justify;
+    line-height: 1.3;
 }
 
 .registration-button-container {
@@ -424,7 +426,9 @@ body {
 .agenda-info {
     margin: 0 auto;
     max-width: 600px;
+
     text-align: justify;
+    line-height: 1.3;
 }
 .agenda-object-pool {
     padding: 64px 0 32px;
@@ -444,6 +448,7 @@ body {
     box-sizing: border-box;
     vertical-align: middle;
     text-align: center;
+    line-height: 1.3;
 }
 .agenda-object-title {
     padding-top: 8px;
@@ -502,6 +507,7 @@ body {
     padding: 32px 0;
     background-color: rgb(43, 60, 78);
     text-align: justify;
+    line-height: 1.3;
 }
 
 .equipment-content-container {
@@ -600,22 +606,26 @@ body {
 }
 
 /* legalInformation */
-.legalInformation-separator {
+.footnote-separator {
     height: 2px;
     border-radius: 1px;
     background-color: #ddd;
     margin: 16px 8px;
 }
-.legalInformation-container {
+.footnote-container {
     color: #a0a0a0;
     text-align: center;
-    font-size: 0.75rem;
     padding-bottom: 16px;
 }
-.legalInformation-link {
-    font-size: 0.75rem;
+.footnote-link {
     color: #a0a0a0;
 }
-.legalInformation-link:hover {
+.footnote-link:hover {
     color: #c0c0c0;
+}
+
+.legalInformation {
+    padding-top: 6px;
+    color: #a0a0a0;
+    font-size: 0.9rem;
 }
