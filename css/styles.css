@@ -29,6 +29,13 @@ body {
     display: table;
 }
 
+.link {
+    color: lightgray;
+}
+.link:hover {
+    color: white;
+}
+
 /*Nav Bar*/
 .navbar {
     display: flex;
