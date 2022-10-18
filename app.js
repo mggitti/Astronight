@@ -66,6 +66,13 @@ var heroImages = [
     },
 ];
 
+// Redirect to the https version of the page (except for localhost)
+if (location.hostname != "localhost" && location.hostname != "127.0.0.1") {
+    if (window.location.protocol == "http:") {
+        window.location.href = window.location.href.replace("http:", "https:");
+    }
+}
+
 for (let i = 0; i < faqCollapsibles.length; i++) {
     faqCollapsibles[i].addEventListener("click", function () {
         this.classList.toggle("active");
