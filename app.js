@@ -252,5 +252,5 @@ function hideFullscreenImage() {
 }
 
 function jumpToRegistrationForm() {
-    window.location.href = "https://form.jotform.com/220952533108047";
+    window.location.href = "https://form.jotform.com/222973839820062";
 }
